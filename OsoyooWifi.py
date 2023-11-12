@@ -1,23 +1,26 @@
+#!/usr/bin/env python
+# Olivier Georgeon, 2023.
+# This code is used to teach Developmental AI.
+
 import socket
 import keyboard
 import sys
 
-UDP_IP = "192.168.4.1"  # AP mode osoyoo_robot
+UDP_IP = "192.168.4.1"
 UDP_TIMEOUT = 5  # Seconds
 
 
-class WifiInterface:
+class OsoyooWifi:
     def __init__(self, ip=UDP_IP, port=8888):
         self.IP = ip
         self.port = port
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.socket.settimeout(UDP_TIMEOUT)
-        # self.socket.connect((UDP_IP, UDP_PORT))  # Not necessary
 
     def enact(self, action):
         """ Sending the action string, waiting for the outcome, and returning the outcome bytes """
-        outcome = b'{"status":"T"}'  # Default status T if timeout
-        #print("sending " + action)
+        outcome = None  # Default status T if timeout
+        # print("sending " + action)
         self.socket.sendto(bytes(action, 'utf-8'), (self.IP, self.port))
         try:
             outcome, address = self.socket.recvfrom(512)
@@ -26,29 +29,26 @@ class WifiInterface:
         return outcome
 
 
-def onkeypress(event):
-    """ Suggested by Célien """
-    print("Send:", event.name)
-    outcome = wifiInterface.enact(event.name)
-    print(outcome)
-
-
 # Test the wifi interface by controlling the robot from the console
 # Provide the Robot's IP address as a launch argument
+# py OsoyooWifi.py 192.168.8.242
 if __name__ == '__main__':
-    ip = UDP_IP
+    _ip = UDP_IP
     if len(sys.argv) > 1:
-        ip = sys.argv[1]
+        _ip = sys.argv[1]
     else:
         print("Please provide your robot's IP address")
-    print("Robot IP: " + ip)
-    wifiInterface = WifiInterface(ip)
-    # keyboard.on_press(onkeypress) Suggested by Celien
+    print("Connecting to robot: " + _ip)
+    print("Action keys: 1: Turn left, 2: Backward, 3: Turn right, 4: Swipe left, 6: Swipe right, 8: Forward, -: Scan")
+    print("Ctrl+C and ENTER to abort")
+    osoyoo_wifi = OsoyooWifi(_ip)
+    clock = 0
     _action = ""
     while True:
-        print("Action key: ", end="")
+        print("Press action key:")
         _action = keyboard.read_key().upper()
-        print()
-        _outcome = wifiInterface.enact('{"action":"' + _action + '"}')
-        # _outcome = wifiInterface.enact(_action)
-        print(_outcome)
+        action_string = '{"clock":' + str(clock) + ', "action":"' + _action + '"}'
+        print("Sending packet:", action_string)
+        _outcome = osoyoo_wifi.enact(action_string)
+        print("Received packet:", _outcome)
+        clock += 1

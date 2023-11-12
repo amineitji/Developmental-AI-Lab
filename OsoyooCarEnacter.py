@@ -2,7 +2,7 @@
 # This code is used to teach Developmental AI.
 # Requires:
 #   - A robot Osoyoo Car https://osoyoo.com/2019/11/08/omni-direction-mecanum-wheel-robotic-kit-v1/
-from WifiInterface import WifiInterface
+from OsoyooWifi import OsoyooWifi
 import sys
 import json
 
@@ -10,7 +10,7 @@ import json
 class OsoyooCarEnacter:
     def __init__(self, ip):
         # Handling the wifi connection to the robot
-        self.wifiInterface = WifiInterface(ip)
+        self.wifiInterface = OsoyooWifi(ip)
 
     def outcome(self, action):
         """ Enacting an action and returning the outcome """
@@ -35,7 +35,7 @@ class OsoyooCarEnacter:
         return outcome
 
 
-# Testing the Osoyoo Car Enacter but controlling the robot from the console
+# Testing the Osoyoo Car Enacter by controlling the robot from the console
 if __name__ == "__main__":
     ip = "192.168.4.1"
     if len(sys.argv) > 1:
