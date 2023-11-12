@@ -2,9 +2,10 @@
 # Olivier Georgeon, 2021.
 # This code is used to teach Developmental AI.
 
-from turtlepy_enacter import TurtlePyEnacter
+# TODO: Uncomment the environment to test your agent in one of these more complex environment
+# from turtlepy_enacter import TurtlePyEnacter
+# from PetitCatEnacter import PetitCatEnacter
 # from turtlesim_enacter import TurtleSimEnacter # requires ROS
-# from OsoyooCarEnacter import OsoyooCarEnacter
 
 
 class Agent:

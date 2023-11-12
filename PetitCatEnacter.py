@@ -2,15 +2,15 @@
 # This code is used to teach Developmental AI.
 # Requires:
 #   - A robot Osoyoo Car https://osoyoo.com/2019/11/08/omni-direction-mecanum-wheel-robotic-kit-v1/
-from OsoyooWifi import OsoyooWifi
+from PetitCatTester import PetitCatTester
 import sys
 import json
 
 
-class OsoyooCarEnacter:
+class PetitCatEnacter:
     def __init__(self, ip):
         # Handling the wifi connection to the robot
-        self.wifiInterface = OsoyooWifi(ip)
+        self.wifiInterface = PetitCatTester(ip)
 
     def outcome(self, action):
         """ Enacting an action and returning the outcome """
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     else:
         print("Please provide your robot's IP address")
     print("Robot IP: " + ip)
-    e = OsoyooCarEnacter(ip)
+    e = PetitCatEnacter(ip)
 
     _outcome = 0
     for i in range(10):

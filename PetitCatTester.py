@@ -10,7 +10,7 @@ UDP_IP = "192.168.4.1"
 UDP_TIMEOUT = 5  # Seconds
 
 
-class OsoyooWifi:
+class PetitCatTester:
     def __init__(self, ip=UDP_IP, port=8888):
         self.IP = ip
         self.port = port
@@ -31,7 +31,7 @@ class OsoyooWifi:
 
 # Test the wifi interface by controlling the robot from the console
 # Provide the Robot's IP address as a launch argument
-# py OsoyooWifi.py 192.168.8.242
+# py PetitCatTester.py 192.168.8.242
 if __name__ == '__main__':
     _ip = UDP_IP
     if len(sys.argv) > 1:
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     print("Connecting to robot: " + _ip)
     print("Action keys: 1: Turn left, 2: Backward, 3: Turn right, 4: Swipe left, 6: Swipe right, 8: Forward, -: Scan")
     print("Ctrl+C and ENTER to abort")
-    osoyoo_wifi = OsoyooWifi(_ip)
+    osoyoo_wifi = PetitCatTester(_ip)
     clock = 0
     _action = ""
     while True:
@@ -51,4 +51,5 @@ if __name__ == '__main__':
         print("Sending packet:", action_string)
         _outcome = osoyoo_wifi.enact(action_string)
         print("Received packet:", _outcome)
-        clock += 1
+        if _outcome is not None:
+            clock += 1
