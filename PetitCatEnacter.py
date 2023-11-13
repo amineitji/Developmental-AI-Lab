@@ -9,9 +9,9 @@ import json
 
 
 class PetitCatEnacter:
-    def __init__(self, ip):
+    def __init__(self, robot_ip, timeout=5):
         # Handling the wifi connection to the robot
-        self.petitcat_tester = PetitCatTester(ip, 5)
+        self.petitcat_tester = PetitCatTester(robot_ip, timeout)
 
     def outcome(self, action):
         """ Enacting an action and returning the outcome """
@@ -25,10 +25,10 @@ class PetitCatEnacter:
             if outcome_string is not None:
                 json_outcome = json.loads(outcome_string)
                 # Return the outcome based on floor change
-                if 'floor' in json_outcome:
-                    # outcome = json_outcome['floor']
-                    if json_outcome['floor'] > 0:
-                        outcome = 1
+                if 'floor' in json_outcome and json_outcome['floor'] > 0:
+                    outcome = 1
+                if 'impact' in json_outcome and json_outcome['impact'] > 0:
+                    outcome = 1
         else:
             print("Action", action, "is not accepted")
             exit()

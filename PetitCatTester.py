@@ -39,6 +39,7 @@ class PetitCatTester:
         return _outcome
 
     def send(self, _action):
+        """Format the action string for the notebook"""
         command_dict = {'clock': self.clock, 'action': _action}
         if self.focus_x is not None:
             command_dict['focus_x'] = self.focus_x
