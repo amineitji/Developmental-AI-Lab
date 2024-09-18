@@ -1,11 +1,11 @@
-# L'agent qui pilotait une tortue
+# L'agent qui dompta une tortue
 
 Excuter [l'Agent2 que vous avez fait précédemment](Agent-2) dans l'environnement TurtlePy.
 Pour cela, modifiez `world.py` pour que votre agent intéragisse avec l'environnement [Turtlepy_enacter.py](https://github.com/OlivierGeorgeon/TestROS/blob/master/turtlepy_enacter.py).
 
 L'environnement TurtlePy_enacter renvoie outcome 0 quand la tortue avance sans se cogner, et outcome 1 quand elle se cogne sur le bord de la fenêtre. Il peut être nécessaire d'agrandir la fenêtre avec votre souris pour voir le bord. 
 
-![TurtlePy](https://user-images.githubusercontent.com/11695651/140096204-1518e200-fc1f-4f5c-9615-39a058fa4368.PNG)
+![TurtlePy](trace_agent3.png)
 
 _Figure 1: Les déplacements générées par TurtlePy-enacter dans l'environnement TurtlePy_
 
