@@ -1,7 +1,7 @@
 # L'agent qui préférait les interactions positives 
 (sauf s'il s'ennuie)
 
-L’agent 2 doit choisir préférentiellement les interactions qui ont une valeur hédoniste positive, sauf s’il s’ennuie, auquel cas il préfère faire une action différente même si elle conduit à une interaction de valeur négative. 
+L’agent 2 doit choisir préférentiellement les interactions qui ont une valence positive, sauf s’il s’ennuie, auquel cas il préfère faire une action différente même si elle conduit à une interaction de valence négative. 
 
 Dans la trace, on doit donc voir que l’agent répète plusieurs fois une action qui produit une interaction positive jusqu’à ce qu’il s’ennuie. Ensuite, il fait une seule fois une action différente qui produit une interaction de valeur négative. Ensuite, il fait à nouveau plusieurs fois l’action qui produit une interaction de valeur positive (Figure 1). 
 
