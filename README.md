@@ -21,7 +21,7 @@ This repository provides the code and the instructions for the lab sessions asso
 
 # The assignments in English
 
-* [Agent 1](docs/agent1.pynb): the agent who avoided the ordinary
-* [Agent 2](docs/agent2.pynb): the agent who thrived on good vibes
-* [Agent 3](docs/agent3.pynb): the agent who tamed the turtle
-* [Agent 4](docs/agent4.pynb): the agent who shifted with the scene
+* [Agent 1](docs/agent1.ipynb): the agent who avoided the ordinary
+* [Agent 2](docs/agent2.ipynb): the agent who thrived on good vibes
+* [Agent 3](docs/agent3.ipynb): the agent who tamed the turtle
+* [Agent 4](docs/agent4.ipynb): the agent who shifted with the scene
