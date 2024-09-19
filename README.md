@@ -1,4 +1,4 @@
-# README of this Developmental AI Lab
+# Developmental AI Lab
 
 This repository provides the code and the instructions for the lab sessions associated with my Developmental AI course.
 
@@ -6,10 +6,10 @@ This repository provides the code and the instructions for the lab sessions asso
 
 ```
 .
-├── world.py         # Stand-alone framework to implement your agents
-├── resources.py     # Some classes useful to the lab
-├── docs             # Instructions
-└── README.md        # This file.
+├── world.py        # Base framework to do the assignments in a cloned repository.
+├── agent4_base.py  # Some classes useful to assignment 4.
+├── docs            # Instructions.
+└── README.md       # This file.
 ```
 
 # The assignments in English
@@ -21,7 +21,7 @@ These assignments were designed to execute in jupyter notebooks
 * [Agent 3](docs/agent3.ipynb): the agent who tamed the turtle
 * [Agent 4](docs/agent4.ipynb): the agent who shifted with the context
 
-# Les instructions en français:
+# Les instructions en français
 
 Ces instructions sont prévues pour être réalisées à partir d'un clone de ce repository.
 

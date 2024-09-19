@@ -1,4 +1,18 @@
-# L'agent qui n'aimait pas s'ennuyer
+# L'AGENT QUI N'AIMAIT PAS S'ENNUYER
+
+# Préparation
+
+Le fichier [world.py](https://github.com/OlivierGeorgeon/Developmental-AI-Lab/blob/master/world.py) contient le cadre général pour implémenter un agent interagissant avec un environnement. 
+Le nom "world" vient du fait qu'il contient à la fois l'agent et son environnement (minimaliste).
+
+Executer world.py dans votre IDE python favori, par exemple pycharm. 
+Vous obtenez la trace d'interaction de l'agent pendant 10 cycles d'interaction (Figure 1).
+
+![Trace 0](trace0.png)
+
+Cet agent choisit toujours l'action 0 et anticipe toujours le résultat 0. Il est donc toujours satisfait de son anticipation mais "malheureux" car cette interaction a pour valence -1.
+
+# Instuctions du TP
 
 Implémenter un agent qui : 
 1. apprend à prédire le résultat (outcome) de ses action en fonction de son environnement. 
