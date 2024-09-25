@@ -14,7 +14,7 @@ This repository provides the code and the instructions for the lab sessions asso
 
 # The assignments in English
 
-These assignments were designed to execute in jupyter notebooks
+Jupyter notebooks that you can execute in Google Colab:
 
 * [Agent 1](docs/agent1.ipynb): the agent who avoided the ordinary
 * [Agent 2](docs/agent2.ipynb): the agent who thrived on good vibes
@@ -32,4 +32,5 @@ Ces instructions sont prévues pour être réalisées à partir d'un clone de ce
 
 # Learn more
 
-See how developmental learning applies to robotics in the [PetitCat](https://github.com/OlivierGeorgeon/osoyoo) project.
+* [Developemntal AI course](https://www.youtube.com/playlist?list=PLlSPp5EpW5vEkajUvAG7r9HgDamIzZLUe): my youtube video playlist 
+* [The PetitCat project](https://github.com/OlivierGeorgeon/osoyoo): applying developmental AI to robotics

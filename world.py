@@ -75,7 +75,6 @@ e = Environment1()
 # e = Environment2()
 # e = Environment3()
 # e = TurtlePyEnacter()
-# e = OsoyooCarEnacter()
 # e = TurtleSimEnacter()
 
 if __name__ == '__main__':
