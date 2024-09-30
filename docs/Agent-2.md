@@ -9,4 +9,6 @@ Dans la trace, on doit donc voir que l’agent répète plusieurs fois une actio
 ![Trace_anticipation_ennui_hedoniste](trace_agent2.png)
 _Figure 1. Noter que pendant les 4 premiers cycles d'interaction, l'agent n'essaie pas action 1 car il ignore encore qu'elle produit outcome 1 qui correspond à une interaction de valence positive._
 
-Tester votre agent dans Environment1 et dans Environment2. Testez aussi votre agent avec une table de valences différentes, par exemple  `valences = [[1, -1], [1, -1]]`
+Tester votre agent dans Environment1 et dans Environment2. 
+Testez aussi votre agent avec une table de valences différentes, par exemple  `valences = [[1, -1], [1, -1]]`. 
+Notez que pour certaines valences et dans certains environnement, il peut etre impossible pour l'agent d'obtenir des valences positives. 
