@@ -6,6 +6,8 @@ L’agent 4 va donc devoir choisir sa prochaine action en fonction du contexte d
 Nous allons caractériser le contexte par l’interaction (couple [action, outcome]) qui a été effectuée au cycle d’avant. 
 A chaque fin de cycle _t_, l'agent doit mémoriser la séquence [interaction(_t-1_), interaction(_t_)] qui a été effectuée.
 
+Pour faciliter l'implémentation, utiliser la class `Interaction` disponible dans [resources.py](../agent4_base.py).
+
 Le mécanisme prédictif de l’agent va se baser sur cette mémoire des séquences pour anticiper l’interaction qu’il pourra faire au temps _t+1_ connaissant l’interaction qu’il a faite au temps _t_.
 
 ![Trace_agent_4](trace_agent4.png)

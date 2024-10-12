@@ -19,6 +19,7 @@ class Interaction:
         """ Interactions are equal if they have the same key """
         return self.key() == other.key()
 
+
 class Agent:
     """Creating our agent"""
     def __init__(self, _interactions):
@@ -29,8 +30,9 @@ class Agent:
     def action(self, _outcome):
         """ Tracing the previous cycle """
         previous_interaction = self._interactions[f"{self._intended_interaction.action}{_outcome}"]
-        print(f"Action: {self._intended_interaction.action}, Prediction: {self._intended_interaction.outcome}, Outcome: {_outcome}, " 
-              f"Prediction: {self._intended_interaction.outcome == _outcome}, Valence: {previous_interaction.valence})")
+        print(f"Action: {self._intended_interaction.action}, Prediction: {self._intended_interaction.outcome}, "
+              f"Outcome: {_outcome}, Prediction_correct: {self._intended_interaction.outcome == _outcome}, "
+              f"Valence: {previous_interaction.valence})")
 
         """ Computing the next interaction to try to enact """
         # TODO: Implement the agent's decision mechanism
