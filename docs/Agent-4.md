@@ -8,8 +8,7 @@ A chaque fin de cycle _t_, l'agent doit mémoriser la séquence [interaction(_t-
 
 Pour faciliter l'implémentation, utiliser la class `Interaction` disponible dans [agent4_base.py](../agent4_base.py).
 
-Le mécanisme prédictif de l’agent va se baser sur cette mémoire des séquences pour anticiper l’interaction qu’il pourra faire au temps _t+1_ connaissant l’interaction qu’il a faite au temps _t_.
-
+Le mécanisme prédictif de l’agent va se baser sur cette mémoire des paires d'interaction pour anticiper l’interaction qu’il pourra faire au temps _t+1_ connaissant l’interaction qu’il a faite au temps _t_.
 ![Trace_agent_4](trace_agent4.png)
 
 _Figure 1: Exemple de trace de l'Agent4 dans l'Environnement3._
